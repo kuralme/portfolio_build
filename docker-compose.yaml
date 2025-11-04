@@ -1,0 +1,17 @@
+version: '3'
+services:
+  jekylldev-portfolio:
+    build: .
+    image: jekylldev-portfolio
+    container_name: jekylldev-portfolio
+    volumes:
+      - ./kuralme.github.io:/home/kuralme.github.io
+    ports:
+      - "4000:4000"
+    command: >
+      sh -c "cd /home/kuralme.github.io &&
+             bundle install &&
+             bundle exec jekyll serve --host 0.0.0.0"
+    environment:
+      - JEKYLL_ENV=development
+    restart: always
