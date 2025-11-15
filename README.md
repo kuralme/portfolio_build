@@ -10,6 +10,9 @@ docker-compose build
 
 # Run the development server
 docker-compose up
+
+# Or run the script
+bash run_compose.sh
 ```
 
-The site will be available at `http://localhost:4000`
+The site will be available at `http://localhost:4000` during testing
